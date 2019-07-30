@@ -1,8 +1,6 @@
 # CopyGithubLabels
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/copy_github_labels`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Copy labels from one GitHub repository to another.
 
 ## Installation
 
@@ -22,7 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use command-line:
+```bash
+# Use access token
+$ copy_github_labels -t <access_token> <source_repo> <target_repo>
+
+# Use username & password
+$ copy_github_labels -u <username> <source_repo> <target_repo>
+
+# Override existing labels
+$ copy_github_labels -t <access_token> -f <source_repo> <target_repo>
+
+```
+
+Use in code:
+```ruby
+client = CopyGithubLabels::Client.new(access_token: 'YOUR-ACCESSTOKEN')
+client.copy_labels('source-repo', 'target-repo', options = { override: false })
+```
 
 ## Development
 

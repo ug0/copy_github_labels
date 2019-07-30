@@ -1,4 +1,6 @@
 # CopyGithubLabels
+[![Gem Version](https://badge.fury.io/rb/copy_github_labels.svg)](https://badge.fury.io/rb/copy_github_labels)
+
 
 Copy labels from one GitHub repository to another.
 
